@@ -1,0 +1,22 @@
+server:
+  port: 8090
+
+
+# pgsql
+spring:
+  application:
+    name: spring-boot-tutorial
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/demo_geotools?stringtype=unspecified&ApplicationName=tutorial
+    username: postgres
+    password: 123456
+  jackson:
+    serialization:
+      write-dates-as-timestamps: true  #使用数值timestamp表示日期
+
+#mybatis.configuration.mapUnderscoreToCamelCase: true
+
+#mybatis
+mybatis:
+  mapper-default-scope: classpath:mapper/*.xml
